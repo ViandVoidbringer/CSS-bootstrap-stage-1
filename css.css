@@ -1,3 +1,24 @@
+
 .container {
-    background-color: #000;
+    margin-left: auto;
+    margin-right: auto;
+
+   
+ 
+    
+}
+.header {
+    padding-top: 77px;
+    padding-bottom: 96px;
+}
+.header-img {
+    display: inline-block;
+    width: 39%;
+
+}
+.header-text {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+  
 }
