@@ -86,8 +86,6 @@ clear: both;
    
 
 }
-
-}
 .header-text__price {
     font-size: 28px;
     font-weight: 700;
@@ -124,7 +122,7 @@ content: " ";
 display: table;
 clear: both;
 }
-.тык {
+.push {
     border-radius: 3px;
     background-color: rgb(11, 71, 7);
     font-size: 24px;
