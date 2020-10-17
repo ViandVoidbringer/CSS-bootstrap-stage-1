@@ -89,7 +89,7 @@ clear: both;
 .features-block {
     display: inline-block;
     text-align: center;
-    width: 33%;
+    width: 35%;
     float: left;
 }
 .features-block__img {
