@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(134, 115, 241) ;
+    margin: 0%;
+}
+h1 {
+    text-align: center;
+}
+.i {
+    text-align: center;
+}
+
+
+.w {
+    color: plum;
+    
+}
+.e {
+    color: rgb(231, 116, 116);
+}
+.r {
+    color: rgb(228, 228, 101);
+
+}
+.t {
+    color: rgb(230, 119, 79);
+}
+.y {
+    color: rgb(130, 64, 130);
+}
+.col-5 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+.col-7 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.o {
+    color: palegreen;
+}
+footer {
+text-align: center;
+}
+.button {
+    background-color: royalblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    vertical-align: 1500%;
+    border-color: navy;
+    
+    
+}
