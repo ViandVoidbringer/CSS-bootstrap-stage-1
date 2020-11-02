@@ -1,0 +1,4 @@
+[1023/225508.842:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1028/140156.624:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1028/160510.583:ERROR:file_io.cc(135)] WriteFile: Идет закрытие канала. (0xE8)
+[1028/180248.769:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
