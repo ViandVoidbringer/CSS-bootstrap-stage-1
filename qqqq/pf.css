@@ -1,22 +1,40 @@
 body {
     font-family: 'Ubuntu', sans-serif;
-    position: relative;
-width: 1600px;
-height: 4568px;
-background: #FFFFFF;
+    background: #FFFFFF;
+    overflow-x: hidden;/* Немудрено, что без этого была горизонтальная полоса прокрутки*/
+    padding: 0;
+    margin: 0;
+}
+.header {
+    margin: 0 110px 0 110px;/* Отступы на header и main. На footer они не нужны, а без них все прилипло к краям экрана. Девачки, я плачу*/
+}
+
+.main {
+    margin: 0 110px 0 110px;
 }
 .header {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #FCFCFC;
     border-bottom: 1px solid #E9E9E9;
     padding-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+/* Удалил лишний div class="menu". Теперь достаточно написать align-items прямо здесь без дублирования кода.
+     Пусть header будет контейнером. Достаточно для контейнера написать display flex,  все его дочерние элементы станут flex. Но
+     не дочерние дочерних. Допустим, в header у тебя есть пять элементов, а в одном из них, допустим, находится ul. В таким случае, ul тоже надо
+     делать display:flex, то есть header ---> div div div ul div, ul ---> li. header--->ul--->li Здесь li - дочерний элемент ul*/
 }
+/*
 .menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+Тот самый ненужный div class="menu"
+*/
+
+/*
 .title_img {
     display: flex;
     flex-direction: row;
@@ -24,74 +42,89 @@ background: #FFFFFF;
     list-style: none;
     text-decoration: none;
 }
+Мать моя женщина. У тебя здесь одна картинка, а ты ей такое расписываешь. Потому у меня она резко вытянулась. Картинка не является родителем
+элемента, потому ей не нужны эти свойства
+ */
 .uul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     text-decoration: none;
+    /* вот именно здесь я и говорил про ul. Верное решение, молодец*/
 }
-.li_1 {
+.uul li{
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    margin-right: 45px;
+    /* Не нужно прописывать стили для каждого li отдельно, если они одинаковы в одном блоке. Используй этот метод - задай сразу нескольким
+    элементам у одного родителя свойства одновременно и посмотри, сколько кода сократится
+     */
 }
+.li_1 {
+    /*
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+     */
+    margin-right: 60px;
+}
+/*
 .li_2 {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
 }
+*/
 .button_gl {
-    
     color: white;
     font-size: 20px;
 }
-.button_1 {
+.button_gl button{
     border-radius: 5px;
-    width: 200px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    border: 2px solid #0098AC;
     height: 50px;
-    left: 1180px;
-    top: 4286px;
+    /* И здесь. Посмотри, насколько стало короче */
+}
+.button_1 {
     background: #0098AC;
-    border-radius: 5px;
-color: #FFFFFF;
-font-family: Ubuntu;
+    margin-right: 30px;
+    width: 215px;
+    color: #FFFFFF;
+    /*
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
 line-height: 23px;
 text-align: center;
 border: 2px solid #0098AC;
+*/
 }
 .button_2 {
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-    left: 1180px;
-    top: 4286px;
     background: #FFFFFF;
-    border-radius: 5px;
-color: #0098AC;
-font-family: Ubuntu;
+    width: 145px;
+    color: #0098AC;
+    /*
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
 line-height: 23px;
 text-align: center;
 border: 2px solid #0098AC;
+     */
 }
 .bblock {
     display: flex;
     justify-content: space-around;
 }
 .ptext {
-    width: 658px;
-height: 165px;
-left: 223px;
-top: 223px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 40px;
@@ -103,39 +136,17 @@ line-height: 55px;
     align-items: flex-start;
 }
 .button-block {
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-    left: 1180px;
-    top: 4286px;
     background: #0098AC;
-    border-radius: 5px;
+    width: 215px;
 color: #FFFFFF;
-font-family: Ubuntu;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 23px;
 text-align: center;
-border: 2px solid #0098AC;
 }
 .button-block1 {
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-    left: 1180px;
-    top: 4286px;
     background: #FFFFFF;
-    border-radius: 5px;
 color: #0098AC;
-font-family: Ubuntu;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 23px;
-text-align: center;
-border: 2px solid #0098AC;
 margin-left: 10px;
+    width: 145px;
+    /* тоже самое, касающееся кнопок здесь */
 }
 .block-6 {
     display: flex;
@@ -154,15 +165,9 @@ align-items: center;
     display: flex;
     margin-top: 150px;
     justify-content: space-around;
-    font-family: Ubuntu;
 font-style: normal;
 }
 .ttext-h p {
-    width: 553px;
-height: 112px;
-left: 810px;
-top: 974px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: 300;
 font-size: 18px;
@@ -206,53 +211,27 @@ color: #000000;
     align-items: center;
     flex-direction: column;
 }
-.imgsi {
-    width: 166px;
-height: 119px;
-left: 949px;
-top: 1639px;
-}
 .bln2 {
     display: flex;
     margin-top: 130px;
     justify-content: space-around;
 }
 .bln_2 h2 {
-    width: 505px;
-height: 68px;
-left: 220px;
-top: 1944px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 color: #000000;
 }
 .bln_2 p {
-    width: 546px;
-height: 140px;
-left: 220px;
-top: 2042px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: 300;
 font-size: 18px;
 line-height: 154.4%;
 }
 .bln3 h2 {
-    width: 374px;
-    height: 34px;
-    left: 834px;
-    top: 2242px;
-    font-family: Ubuntu;
     font-style: normal;
     font-weight: normal;
 }
 .bln3 p {
-    width: 546px;
-height: 196px;
-left: 834px;
-top: 2306px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: 300;
 font-size: 18px;
@@ -260,26 +239,15 @@ line-height: 154.4%;
 }
 .button25 {
     border-radius: 5px;
-    width: 268px;
-    height: 50px;
-    left: 834px;
-    top: 2552px;
     background: #0098AC;
-    border-radius: 5px;
 color: #FFFFFF;
-font-family: Ubuntu;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 23px;
-text-align: center;
-border: 2px solid #0098AC;
+    height: 50px;
 }
 .advantages {
-    width: 1600px;
-height: 496px;
-left: -1px;
-top: 2690px;
+    /* Вот так я сделал ровные полоски только сверху и снизу. Отрицательный внешний отступ и положительный внутренний,
+     которые уравнивают друг друга*/
+    margin: 50px -110px 0 -110px;
+    padding: 0 110px 0 110px;
 background: #FCFCFC;
 border: 1px solid #E9E9E9;
 box-sizing: border-box;
@@ -293,10 +261,6 @@ box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     align-items: center;
-height: 320px;
-left: 249px;
-top: 2833px;
-margin-top: 30px;
 }
 .a-c1 {
     display: flex;
@@ -304,21 +268,11 @@ margin-top: 30px;
     align-items: center;
 }
 .a-c1 h3 {
-    width: 264px;
-height: 21px;
-left: 277px;
-top: 2856px;
-font-family: Ubuntu;
 font-style: normal;
 text-align: center;
 color: #000000;
 }
 .a-c1 p {
-    width: 264px;
-height: 63px;
-left: 277px;
-top: 2902px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 text-align: center;
@@ -330,21 +284,11 @@ color: #000000;
    align-items: center;
 }
 .a-c2 h4 {
-    width: 264px;
-height: 21px;
-left: 667px;
-top: 2856px;
-font-family: Ubuntu;
 font-style: normal;
 text-align: center;
 color: #000000;
 }
 .a-c2 p {
-    width: 286px;
-height: 63px;
-left: 657px;
-top: 2902px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 text-align: center;
@@ -356,31 +300,17 @@ color: #000000;
     align-items: center;
 }
 .a-c3 h4 {
-    width: 264px;
-height: 21px;
-left: 1057px;
-top: 2856px;
-font-family: Ubuntu;
 font-style: normal;
 text-align: center;
 color: #000000;
 }
 .a-c3 p {
-    width: 264px;
-height: 63px;
-left: 1057px;
-top: 2902px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 text-align: center;
 color: #000000;
 }
 .a-i {
-    width: 215px;
-height: 148px;
-left: 301px;
-top: 2988px;
 }
 .htow {
     justify-content: space-around;
@@ -389,7 +319,6 @@ top: 2988px;
     display: flex;
     justify-content: center;
     margin-top: 130px;
-    font-family: Ubuntu;
 }
 .img_htow {
     display: flex;
@@ -399,11 +328,6 @@ top: 2988px;
     margin-top: 50px;
 }
 .imght1 h2 {
-    width: 164px;
-height: 23px;
-left: 339px;
-top: 3566px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -413,11 +337,6 @@ text-decoration-line: underline;
 color: #000000;
 }
 .imght2 h2 {
-    width: 243px;
-height: 23px;
-left: 670px;
-top: 3566px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -427,11 +346,6 @@ text-decoration-line: underline;
 color: #000000;
 }
 .imght3 h2 {
-    width: 205px;
-height: 23px;
-left: 1059px;
-top: 3566px;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -439,12 +353,6 @@ line-height: 128.9%;
 text-align: center;
 text-decoration-line: underline;
 color: #000000;
-}
-.ih {
-    width: 269px;
-height: 170px;
-left: 657px;
-top: 3365px;
 }
 .fb {
     display: flex;
@@ -459,21 +367,13 @@ top: 3365px;
     text-align: center;
 }
 .h6 {
-    width: 105px;
-height: 25px;
-left: 752px;
-top: 3877px;
-font-family: Ubuntu;
+
 font-style: normal;
 font-weight: 300;
 font-size: 16px;
 line-height: 154.4%;
 text-align: center;
 color: gray;
-width: 638px;
-height: 61px;
-left: 485px;
-top: 3940px;
 background: #FCFCFC;
 border: 1px solid gray;
 box-sizing: border-box;
@@ -484,14 +384,9 @@ box-sizing: border-box;
 }
 .fbcb {
     border-radius: 5px;
-    width: 268px;
-    height: 50px;
-    left: 834px;
-    top: 2552px;
+
     background: #0098AC;
-    border-radius: 5px;
 color: #FFFFFF;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
@@ -503,10 +398,6 @@ border: 2px solid #0098AC;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1600px;
-height: 350px;
-left: 0px;
-top: 4218px;
 background: #3F3D56;
 margin-top: 100px;
 }
@@ -516,7 +407,6 @@ margin-top: 100px;
    align-items: center;
 }
 .f1p {
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -524,7 +414,6 @@ line-height: 21px;
 color: rgba(255, 255, 255, 0.7);
 }
 .f2p {
-    font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -532,7 +421,6 @@ line-height: 21px;
 color: rgba(255, 255, 255, 0.7);
 }
 .f3p {
-    font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
@@ -541,14 +429,8 @@ color: rgba(255, 255, 255, 0.7);
 }
 .bf4b1 {
     border-radius: 5px;
-    width: 200px;
-    height: 50px;
-    left: 1180px;
-    top: 4286px;
     background: #0098AC;
-    border-radius: 5px;
 color: #FFFFFF;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
@@ -558,14 +440,9 @@ border: 2px solid #0098AC;
 }
 .bf4b2 {
     border-radius: 5px;
-    width: 200px;
-    height: 50px;
-    left: 1180px;
-    top: 4286px;
+
     background: #0098AC;
-    border-radius: 5px;
 color: #FFFFFF;
-font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
@@ -584,13 +461,11 @@ margin-top: 20px;
     justify-content: space-around;
     align-items: center;
     width: 1600px;
-left: 0px;
-top: 4218px;
+
 background: #3F3D56;
 border: 1px solid #514F6B;
 }
 .fn2p {
-    font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
