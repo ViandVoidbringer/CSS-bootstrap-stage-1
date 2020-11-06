@@ -168,22 +168,14 @@ button {
         </div>
 
 
-        .part_2 {
-            display: flex;
-            position: absolute;
-        width: 1600px;
-        height: 163px;
-        left: 0px;
-        top: 667px;
-        background: green;
-        border: 1px solid #E9E9E9;
-        box-sizing: border-box;
-        }
-        .block_arrow {
-            display: flex;
-            position: absolute;
-        width: 1004px;
-        height: 106px;
-        left: 298px;
-        top: 696px;
-        }
+
+        /* Удалил лишний div class="menu". Теперь достаточно написать align-items прямо здесь без дублирования кода.
+     Пусть header будет контейнером. Достаточно для контейнера написать display flex,  все его дочерние элементы станут flex. Но
+     не дочерние дочерних. Допустим, в header у тебя есть пять элементов, а в одном из них, допустим, находится ul. В таким случае, ul тоже надо
+     делать display:flex, то есть header ---> div div div ul div, ul ---> li. header--->ul--->li Здесь li - дочерний элемент ul*/
+
+     /* вот именно здесь я и говорил про ul. Верное решение, молодец*/ ыыыыыыыыыыыыыыыыыыыыыы
+
+
+     /* Вот так я сделал ровные полоски только сверху и снизу. Отрицательный внешний отступ и положительный внутренний,
+     которые уравнивают друг друга*/

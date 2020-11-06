@@ -1,14 +1,13 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     background: #FFFFFF;
-    overflow-x: hidden;/* Немудрено, что без этого была горизонтальная полоса прокрутки*/
+    overflow-x: hidden;
     padding: 0;
     margin: 0;
 }
 .header {
-    margin: 0 110px 0 110px;/* Отступы на header и main. На footer они не нужны, а без них все прилипло к краям экрана. Девачки, я плачу*/
+    margin: 0 110px 0 110px;
 }
-
 .main {
     margin: 0 110px 0 110px;
 }
@@ -20,64 +19,22 @@ body {
     padding-bottom: 10px;
     justify-content: space-around;
     align-items: center;
-/* Удалил лишний div class="menu". Теперь достаточно написать align-items прямо здесь без дублирования кода.
-     Пусть header будет контейнером. Достаточно для контейнера написать display flex,  все его дочерние элементы станут flex. Но
-     не дочерние дочерних. Допустим, в header у тебя есть пять элементов, а в одном из них, допустим, находится ul. В таким случае, ul тоже надо
-     делать display:flex, то есть header ---> div div div ul div, ul ---> li. header--->ul--->li Здесь li - дочерний элемент ul*/
 }
-/*
-.menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-Тот самый ненужный div class="menu"
-*/
-
-/*
-.title_img {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-    text-decoration: none;
-}
-Мать моя женщина. У тебя здесь одна картинка, а ты ей такое расписываешь. Потому у меня она резко вытянулась. Картинка не является родителем
-элемента, потому ей не нужны эти свойства
- */
 .uul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     text-decoration: none;
-    /* вот именно здесь я и говорил про ul. Верное решение, молодец*/
 }
-.uul li{
+.uul .li_1, .li_2{
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    /* Не нужно прописывать стили для каждого li отдельно, если они одинаковы в одном блоке. Используй этот метод - задай сразу нескольким
-    элементам у одного родителя свойства одновременно и посмотри, сколько кода сократится
-     */
 }
 .li_1 {
-    /*
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-     */
     margin-right: 60px;
 }
-/*
-.li_2 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-}
-*/
 .button_gl {
     color: white;
     font-size: 20px;
@@ -91,34 +48,17 @@ body {
     text-align: center;
     border: 2px solid #0098AC;
     height: 50px;
-    /* И здесь. Посмотри, насколько стало короче */
 }
 .button_1 {
     background: #0098AC;
     margin-right: 30px;
     width: 215px;
     color: #FFFFFF;
-    /*
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 23px;
-text-align: center;
-border: 2px solid #0098AC;
-*/
 }
 .button_2 {
     background: #FFFFFF;
     width: 145px;
     color: #0098AC;
-    /*
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 23px;
-text-align: center;
-border: 2px solid #0098AC;
-     */
 }
 .bblock {
     display: flex;
@@ -133,7 +73,6 @@ line-height: 55px;
 .block_1 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 .button-block {
     background: #0098AC;
@@ -146,7 +85,6 @@ text-align: center;
 color: #0098AC;
 margin-left: 10px;
     width: 145px;
-    /* тоже самое, касающееся кнопок здесь */
 }
 .block-6 {
     display: flex;
@@ -173,7 +111,6 @@ font-weight: 300;
 font-size: 18px;
 line-height: 154.4%;
 text-align: justify;
-color: #000000;
 }
 .stat-gl {
     display: flex;
@@ -186,27 +123,7 @@ color: #000000;
     justify-content: space-around;
     align-items: center;
 }
-.statimg {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.statimg1 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.statimg2 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.statimg3 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.statimg4 {
+.statimg, .statimg1, .statimg2, .statimg3, .statimg4 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -216,23 +133,12 @@ color: #000000;
     margin-top: 130px;
     justify-content: space-around;
 }
-.bln_2 h2 {
-font-style: normal;
-font-weight: normal;
-color: #000000;
-}
-.bln_2 p {
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 154.4%;
-}
-.bln3 h2 {
+.bln2 h2 {
     font-style: normal;
-    font-weight: normal;
+font-weight: normal;
 }
-.bln3 p {
-font-style: normal;
+.bln2 p {
+    font-style: normal;
 font-weight: 300;
 font-size: 18px;
 line-height: 154.4%;
@@ -242,15 +148,23 @@ line-height: 154.4%;
     background: #0098AC;
 color: #FFFFFF;
     height: 50px;
+    border: 5px solid #0098AC;
 }
 .advantages {
-    /* Вот так я сделал ровные полоски только сверху и снизу. Отрицательный внешний отступ и положительный внутренний,
-     которые уравнивают друг друга*/
     margin: 50px -110px 0 -110px;
     padding: 0 110px 0 110px;
 background: #FCFCFC;
 border: 1px solid #E9E9E9;
 box-sizing: border-box;
+}
+.advantages h3 {
+    font-style: normal;
+    text-align: center;
+}
+.advantages p { 
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
 }
 .a-title {
     display: flex;
@@ -262,58 +176,21 @@ box-sizing: border-box;
     justify-content: space-around;
     align-items: center;
 }
-.a-c1 {
+.a-c1, .a-c2, .a-c3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.a-c1 h3 {
-font-style: normal;
-text-align: center;
-color: #000000;
-}
-.a-c1 p {
-font-style: normal;
-font-weight: normal;
-text-align: center;
-color: #000000;
-}
-.a-c2 {
-    display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-.a-c2 h4 {
-font-style: normal;
-text-align: center;
-color: #000000;
-}
-.a-c2 p {
-font-style: normal;
-font-weight: normal;
-text-align: center;
-color: #000000;
-}
-.a-c3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.a-c3 h4 {
-font-style: normal;
-text-align: center;
-color: #000000;
-}
-.a-c3 p {
-font-style: normal;
-font-weight: normal;
-text-align: center;
-color: #000000;
-}
-.a-i {
 }
 .htow {
     justify-content: space-around;
+}
+.htow h3 {
+    font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 128.9%;
+text-align: center;
+text-decoration-line: underline;
 }
 .title_htow {
     display: flex;
@@ -327,33 +204,6 @@ color: #000000;
     align-items: center;
     margin-top: 50px;
 }
-.imght1 h2 {
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 128.9%;
-text-align: center;
-text-decoration-line: underline;
-color: #000000;
-}
-.imght2 h2 {
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 128.9%;
-text-align: center;
-text-decoration-line: underline;
-color: #000000;
-}
-.imght3 h2 {
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 128.9%;
-text-align: center;
-text-decoration-line: underline;
-color: #000000;
-}
 .fb {
     display: flex;
     justify-content: space-around;
@@ -366,8 +216,10 @@ color: #000000;
 .fbc_h {
     text-align: center;
 }
-.h6 {
-
+.fbc input {
+height: 65px;
+width: 700px;
+margin-top: 15px;
 font-style: normal;
 font-weight: 300;
 font-size: 16px;
@@ -384,14 +236,14 @@ box-sizing: border-box;
 }
 .fbcb {
     border-radius: 5px;
-
+margin-top: 30px;
     background: #0098AC;
 color: #FFFFFF;
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
-line-height: 23px;
-text-align: center;
+width: 200px;
+height: 50px;
 border: 2px solid #0098AC;
 }
 .f {
@@ -406,49 +258,25 @@ margin-top: 100px;
     flex-direction: column;
    align-items: center;
 }
-.f1p {
+.f1p, .f2, .f3 {
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 21px;
 color: rgba(255, 255, 255, 0.7);
 }
-.f2p {
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-color: rgba(255, 255, 255, 0.7);
-}
-.f3p {
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-color: rgba(255, 255, 255, 0.7);
-}
-.bf4b1 {
+.bf4b1, .bf4b2 {
     border-radius: 5px;
     background: #0098AC;
 color: #FFFFFF;
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
-line-height: 23px;
-text-align: center;
+width: 200px;
+height: 50px;
 border: 2px solid #0098AC;
 }
 .bf4b2 {
-    border-radius: 5px;
-
-    background: #0098AC;
-color: #FFFFFF;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 23px;
-text-align: center;
-border: 2px solid #0098AC; 
 margin-top: 20px;
 }
 .f-img {
@@ -457,18 +285,10 @@ margin-top: 20px;
     margin-top: 20px;
 }
 .fn2 {
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
     align-items: center;
-    width: 1600px;
-
+    justify-content: space-around;
+color: rgba(255, 255, 255, 0.7);
 background: #3F3D56;
 border: 1px solid #514F6B;
-}
-.fn2p {
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-color: rgba(255, 255, 255, 0.7);
 }
