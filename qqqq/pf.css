@@ -126,6 +126,20 @@ text-align: justify;
     justify-content: space-around;
     align-items: center;
 }
+.mobile-stat, .mobile-stat2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.mobile-stat2 {
+    margin-top: 20px;
+}
+.statimgm, .statimg1m, .statimg2m, .statimg3m, .statimg4m {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
 .imgsi {
     background: #FFFFFF;
 border: 1px solid #E9E9E9;
@@ -304,6 +318,9 @@ border: 1px solid #514F6B;
     .header-m-l, .header-m-ru{
         display: none;
 }
+.mobile-stat, .mobile-stat2 {
+    display: none;
+}
 }
 @media (max-width: 1200px) {
     
@@ -349,9 +366,76 @@ margin-right: 1px;
     .uul, .button_gl{
 display: none;
     }
+    .stat_img, .statimg1, .statimg2, .statimg3, .statimg4{
+        display: none;
+    }
     .header {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
-    
+    .title_img{
+        margin: auto;
+    }
+    .header-m-ru{
+        display: flex;
+        align-items: center;
+    }
+    .ptext {
+        font-size: 32px;
+    }
+    .img_4, .img_5 {
+        display: none;
+    }
+    .textt {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ttext-h h2 {
+        text-align: center;
+    }
+    .stat-gl {
+        margin-top: 25px;
+    }
+    .statimgm {
+        margin-left: 75px;
+    }
+    .statimg1m {
+        margin-top: 7px;
+        margin-right: 100px;
+    }
+    .bln_2 {
+        margin-left: 75px;
+    }
+    .a-img{
+        display: flex;
+        flex-direction: column;
+    }
+    .a-c2, .a-c3 h3 {
+        margin-top: 50px;
+    }
+    .img_htow {
+        display: flex;
+        flex-direction: column;
+    }
+    .ih {
+        margin-top: 50px;
+    }
+    .fbc input {
+        height: 45px;
+        width: 400px;
+        margin-top: 15px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 154.4%;
+        text-align: center;
+        color: gray;
+        background: #FCFCFC;
+        border: 1px solid gray;
+        box-sizing: border-box;
+    }
+    .f2, .f3 {
+display: none;
+    }
 }
