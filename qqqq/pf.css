@@ -350,6 +350,11 @@ border: 1px solid #514F6B;
         padding: 0;
     }
 }
+@media (max-width: 1330px){
+    .fb_r, .fb_l {
+        display: none;
+    }
+}
 @media (min-width: 1201px) and (max-width: 1600px){
     .title_img2, .pl {
         display: none;
@@ -419,7 +424,10 @@ display: none;
     .ttext-h p {
         text-align: center;
     }
-    .header, .main {
+    .header {
+        margin: 0 50px 0 50px;
+    }
+    .main {
         margin: 0;
     }
     .bblock {
@@ -562,7 +570,7 @@ display: none;
     }
     .title_img2 {
         display: initial;
-    padding: 0 100px 0 100px;
+    margin: 0 100px 0 120px;
     }
     .ttext {
         margin: 0 10px 0 10px;
