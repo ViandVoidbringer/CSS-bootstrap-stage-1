@@ -424,7 +424,6 @@ border: 1px solid #514F6B;
     .stat_img {
         flex-wrap: wrap;
        }
-
        .a-img{
         display: flex;
         flex-direction: column;
