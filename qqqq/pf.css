@@ -628,6 +628,11 @@ box-sizing: border-box;
     text-align: center;
 }
 }
-@media (max-width: 347px) {
-
+@media (max-width: 330px) {
+    .block-66 img {
+        width: 95%;
+    }
+    .ih {
+        width: 95%;
+    }
 }
