@@ -343,7 +343,7 @@ border: 1px solid #514F6B;
         margin-right: 0;
     }
     .textt, .stat, .bln2 {
-        margin-left: 15px;
+        margin: 200px 10px 0 10px;
     }
     .advantages{
         margin: 0;
@@ -378,14 +378,15 @@ border: 1px solid #514F6B;
     .patner {
         margin-top: 40px;
     }
-    .bln_2, .bln3 {
+    .bln_2, .bln3, .img_htow{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .bln_2 {
-       margin-left: 15px;
+    .bln_2, .bln3 {
+        margin: 0 20px 0 20px;
     }
+     
     .header, .main  {
         margin: 0;
     }
@@ -396,17 +397,18 @@ border: 1px solid #514F6B;
     .ttext {
         margin: 0 15px 0 15px;
     }
-    .li_2, .arrow {
-        margin-right: 0px;
-    }
-    .statimg4 h4{
-        margin-left: 0;
-    }
     .a-c3 h3 {
         margin-top: 4px;
     }
+<<<<<<< HEAD
 }
 @media (min-width: 769px) and (max-width: 860px) {
+=======
+     .a-img {
+         flex-wrap: wrap-reverse;
+     }
+}@media (min-width: 769px) and (max-width: 850px) {
+>>>>>>> ae89073f036745142b260138dc72216747e972cb
     .img_4, .f3 {
         display: none;
     }
@@ -435,6 +437,12 @@ border: 1px solid #514F6B;
     .ih {
         margin-top: 50px;
     }
+<<<<<<< HEAD
+=======
+    .bln3 p {
+        margin-right: 20px;
+    }
+>>>>>>> ae89073f036745142b260138dc72216747e972cb
     .pl1 {
         width: 100%;
     }
@@ -554,6 +562,7 @@ display: none;
         margin-right: 18px;
     }
 }
+
 @media (max-width: 576px) {
     .bblock, .ttext, .stat, .advantages, .fb {
         background: url(../img1/background.png);
@@ -631,4 +640,7 @@ box-sizing: border-box;
 .a-title {
     text-align: center;
 }
+}
+@media (max-width: 347px) {
+
 }
