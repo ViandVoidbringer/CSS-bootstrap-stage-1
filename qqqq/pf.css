@@ -406,7 +406,7 @@ border: 1px solid #514F6B;
         margin-top: 4px;
     }
 }
-@media (min-width: 769px) and (max-width: 850px) {
+@media (min-width: 769px) and (max-width: 860px) {
     .img_4, .f3 {
         display: none;
     }
@@ -424,9 +424,7 @@ border: 1px solid #514F6B;
     .stat_img {
         flex-wrap: wrap;
        }
-       .bln2 {
-           margin-left: 50px;
-       }
+
        .a-img{
         display: flex;
         flex-direction: column;
@@ -437,6 +435,9 @@ border: 1px solid #514F6B;
     }
     .ih {
         margin-top: 50px;
+    }
+    .pl1 {
+        width: 100%;
     }
 }
 @media (max-width: 768px){
