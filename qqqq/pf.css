@@ -400,15 +400,8 @@ border: 1px solid #514F6B;
     .a-c3 h3 {
         margin-top: 4px;
     }
-<<<<<<< HEAD
 }
 @media (min-width: 769px) and (max-width: 860px) {
-=======
-     .a-img {
-         flex-wrap: wrap-reverse;
-     }
-}@media (min-width: 769px) and (max-width: 850px) {
->>>>>>> ae89073f036745142b260138dc72216747e972cb
     .img_4, .f3 {
         display: none;
     }
@@ -437,12 +430,6 @@ border: 1px solid #514F6B;
     .ih {
         margin-top: 50px;
     }
-<<<<<<< HEAD
-=======
-    .bln3 p {
-        margin-right: 20px;
-    }
->>>>>>> ae89073f036745142b260138dc72216747e972cb
     .pl1 {
         width: 100%;
     }
